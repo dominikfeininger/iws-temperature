@@ -35,7 +35,7 @@ public class ConversionCelsiusTest {
 	@Test
 	public void testFahrenheitToCelsius() {
 		double expectedCelsius = 20;
-		double fahrenheit = 67;
+		double fahrenheit = 68;
 		
 		double celsius = converter.fahrenheitToCelsius(fahrenheit);		
 		assertEquals(expectedCelsius, celsius, 0.0);
