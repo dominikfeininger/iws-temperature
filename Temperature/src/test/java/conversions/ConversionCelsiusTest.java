@@ -33,8 +33,12 @@ public class ConversionCelsiusTest {
 	}
 	
 	@Test
-	public void test2() {
-		assert(true);
+	public void testFahrenheitToCelsius() {
+		double expectedCelsius = 20;
+		double fahrenheit = 67;
+		
+		double celsius = converter.fahrenheitToCelsius(fahrenheit);		
+		assertEquals(expectedCelsius, celsius, 0.0);
 	}
 
 }
