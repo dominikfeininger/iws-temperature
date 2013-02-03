@@ -28,6 +28,7 @@ public class ConversionParameterizedTest {
 				{-100, -148},
 				{700, 1292},
 				{0, 32},
+				//bug
 				{-19, -2}
 		};
 		return Arrays.asList(data);
