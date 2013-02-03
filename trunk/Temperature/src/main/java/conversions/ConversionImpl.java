@@ -2,7 +2,7 @@ package main.java.conversions;
 
 /**
  * 
- * @author Benjamin
+ * @author Lautenschlaeger & Feininger
  *
  * Formeln:	 
  * C=K-273.15
@@ -13,21 +13,22 @@ package main.java.conversions;
  */
 public class ConversionImpl implements Conversion {
 
-	/**
-	 * converts fahrenheit temp to celsius
-	 */
 	@Override
-	public double fahrenheitToCelsius(double fahrenheit){
-
-		return (fahrenheit - 32.0) * (5.0/9.0);
-	}
-	
-	
-	@Override
-	public double celsiusToFahrenheit(double celsius){
+	public double celsiusToFahrenheit(double celsius) throws InterruptedException{
+		
+		//convertion alg. is too slow
+		//Thread.sleep(20);
+		
 		return (celsius * (9.0/5.0)) + 32.0;
 	}
 	
+	@Override
+	public double fahrenheitToCelsius(double fahrenheit){
+		
+		//return (fahrenheit - 31.0) * (5.0/9.0);
+		
+		return (fahrenheit - 32.0) * (5.0/9.0);
+	}	
 	
 	@Override
 	public double celsiusToKelvin(double celsius){
@@ -36,7 +37,10 @@ public class ConversionImpl implements Conversion {
 	
 	
 	@Override
-	public double kelvinToCelsius(double kelvin){
+	public double kelvinToCelsius(double kelvin) throws IllegalArgumentException{
+		if(kelvin < 0){
+			throw new IllegalArgumentException();
+		}
 		return (kelvin - 273.15);
 	}	
 }
