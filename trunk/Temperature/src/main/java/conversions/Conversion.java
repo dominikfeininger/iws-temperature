@@ -8,12 +8,6 @@ public interface Conversion {
 
 	public abstract double celsiusToKelvin(double celsius);
 
-	/**
-	 * 
-	 * @param kelvin
-	 * @return celsius
-	 * @throws Exception 
-	 */
 	public abstract double kelvinToCelsius(double kelvin) throws IllegalArgumentException;
 
 }

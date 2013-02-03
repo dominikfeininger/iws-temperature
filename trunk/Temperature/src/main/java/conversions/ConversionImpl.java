@@ -16,6 +16,11 @@ public class ConversionImpl implements Conversion {
 	@Override
 	public double celsiusToFahrenheit(double celsius) throws InterruptedException{
 		
+		//bug in calc
+		if(celsius == -19){
+			return 1000; //expects -2
+		}
+		
 		//convertion alg. is too slow
 		//Thread.sleep(20);
 		
