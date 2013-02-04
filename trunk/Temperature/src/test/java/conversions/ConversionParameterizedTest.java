@@ -29,20 +29,20 @@ public class ConversionParameterizedTest {
 				{-100, -148},
 				{700, 1292},
 				{0, 32},
-				//bug
-				{-19, -2}//1000
+				{-19, -2}
 		};
 		return Arrays.asList(data);
 	}
-	
-	//4
-	//Collection mit mehreren Werten
-	//BUG im code für -19°C -> 1000°F -> wird gefixt
+
 	@Test
 	public void convertCelsiusToFahrenheit() throws InterruptedException{
+		
+		//4
+		//Collection mit mehreren Werten
+		//BUG im code für -19°C -> 1000°F -> wird gefixt
+		
 		MyConversionImpl converter = new MyConversionImpl();
 		assertEquals("Result", this.temperaturInK, 
 				converter.celsiusToFahrenheit(this.temperaturInC), 0.55);
 	}
-	
 }

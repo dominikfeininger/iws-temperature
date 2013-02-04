@@ -24,7 +24,7 @@ public class MyConversionImpl implements Conversion {
 		}
 		
 		//convertion alg. is too slow
-		//Thread.sleep(20);
+		Thread.sleep(20);
 		
 		//1 a)
 		//gruen
@@ -36,17 +36,11 @@ public class MyConversionImpl implements Conversion {
 		
 		//1 b)
 		//rot
-		//return (fahrenheit - 31.0) * (5.0/9.0);
+		return (fahrenheit - 31.0) * (5.0/9.0);
 		
 		//gruen
-		return (fahrenheit - 32.0) * (5.0/9.0);
+		//return (fahrenheit - 32.0) * (5.0/9.0);
 	}	
-	
-	@Override
-	public double celsiusToKelvin(double celsius){
-		return (celsius + 273.15);
-	}
-	
 	
 	@Override
 	public double kelvinToCelsius(double kelvin) throws IllegalArgumentException{
