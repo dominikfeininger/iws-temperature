@@ -1,9 +1,11 @@
 package test.java.conversions;
 
 import static org.junit.Assert.*;
+
 import main.java.conversions.Conversion;
 import main.java.conversions.MyConversionImpl;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 /**
@@ -20,8 +22,7 @@ public class ConversionTest {
 	public void setUp() throws Exception {
 		converter = new MyConversionImpl();
 	}
-
-
+    
 	@Test
 	public void testCelsiusToFahrenheit() throws InterruptedException{
 		
@@ -71,6 +72,19 @@ public class ConversionTest {
 		//3
 		//rot
 		//expected = IllegalArgumentException.class
+	}
+	
+	@Test
+	public void testCelsiusToKelvin(){
+		//5
+		//Test fue Jenkins
+		//gruen
+		//Celsius zu Kelvin
+		double celsius = 128;
+		double expectedKelvin = 401;
+		
+		double kelvin = converter.celsiusToKelvin(celsius);
+		assertEquals(expectedKelvin, kelvin, 0.55);
 	}
 	
 }

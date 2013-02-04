@@ -49,4 +49,9 @@ public class MyConversionImpl implements Conversion {
 		}
 		return (kelvin - 273.15);
 	}	
+	
+	@Override
+	public double celsiusToKelvin(double celsius){
+		return 	(celsius + 273.15);
+	}
 }
