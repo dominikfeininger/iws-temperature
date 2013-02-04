@@ -2,6 +2,6 @@ package main.java.login;
 
 import javax.security.auth.login.AccountNotFoundException;
 
-public interface IAccountRepository {
+public interface IAccountManager {
 	IAccount find(String accountId);
 }

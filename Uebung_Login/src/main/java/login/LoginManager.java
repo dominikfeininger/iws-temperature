@@ -4,12 +4,12 @@ import main.java.login.exceptions.AccountAlreadyLoggedInException;
 import main.java.login.exceptions.AccountDisabledException;
 import main.java.login.exceptions.NoConnectionToRepositoryException;
 
-public class LoginService {
-	private final IAccountRepository accountRepository;
+public class LoginManager {
+	private final IAccountManager accountRepository;
 	private String previousAccountId = "";
 	private int failedAttempts = 0;
 
-	public LoginService(IAccountRepository accountRepository) {
+	public LoginManager(IAccountManager accountRepository) {
 		this.accountRepository = accountRepository;
 	}
 
