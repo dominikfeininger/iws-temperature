@@ -11,11 +11,13 @@ package main.java.conversions;
  * C=(F-32)÷ 1.8
  *
  */
-public class ConversionImpl implements Conversion {
+
+public class MyConversionImpl implements Conversion {
 
 	@Override
 	public double celsiusToFahrenheit(double celsius) throws InterruptedException{
 		
+		//4
 		//bug in calc
 		if(celsius == -19){
 			return 1000; //expects -2
@@ -24,14 +26,19 @@ public class ConversionImpl implements Conversion {
 		//convertion alg. is too slow
 		//Thread.sleep(20);
 		
+		//1 a)
+		//gruen
 		return (celsius * (9.0/5.0)) + 32.0;
 	}
 	
 	@Override
 	public double fahrenheitToCelsius(double fahrenheit){
 		
+		//1 b)
+		//rot
 		//return (fahrenheit - 31.0) * (5.0/9.0);
 		
+		//gruen
 		return (fahrenheit - 32.0) * (5.0/9.0);
 	}	
 	
