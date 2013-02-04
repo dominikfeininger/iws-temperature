@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import main.java.conversions.Conversion;
 import main.java.conversions.MyConversionImpl;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 
 /**
@@ -53,11 +52,13 @@ public class ConversionTest {
 	
 	@Test (timeout = 10)
 	public void testCelsiusToFahrenheitPerformance() throws InterruptedException {
+		
 		//2
 		//Performance Test
 		//(timeout = 10)
 		//rot
 		//Celsius zu Fahrenheit -> wird gefixt
+		
 		double celsius = 20;
 		double expectedFahrenheit = 68;
 		
@@ -76,15 +77,16 @@ public class ConversionTest {
 	
 	@Test
 	public void testCelsiusToKelvin(){
+		
 		//5
 		//Test fue Jenkins
 		//gruen
 		//Celsius zu Kelvin
+		
 		double celsius = 128;
 		double expectedKelvin = 401;
 		
 		double kelvin = converter.celsiusToKelvin(celsius);
 		assertEquals(expectedKelvin, kelvin, 0.55);
 	}
-	
 }
