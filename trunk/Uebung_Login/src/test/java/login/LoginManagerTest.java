@@ -2,8 +2,6 @@ package test.java.login;
 
 import static org.junit.Assert.*;
 
-import javax.security.auth.login.AccountNotFoundException;
-
 import main.java.login.IAccount;
 import main.java.login.IAccountManager;
 import main.java.login.LoginManager;
@@ -14,7 +12,7 @@ import main.java.login.exceptions.NoConnectionToRepositoryException;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
-public class LoginServiceTest {
+public class LoginManagerTest {
 
 	/**
 	 * itShouldSetAccountToLoggedInWhenPasswordMatches
