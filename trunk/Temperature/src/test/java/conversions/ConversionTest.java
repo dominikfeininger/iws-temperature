@@ -2,10 +2,15 @@ package test.java.conversions;
 
 import static org.junit.Assert.*;
 import main.java.conversions.Conversion;
-import main.java.conversions.ConversionImpl;
+import main.java.conversions.MyConversionImpl;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * 
+ * @author Lautenschlaeger & Feininger
+ *
+ */
 
 public class ConversionTest {
 
@@ -13,7 +18,7 @@ public class ConversionTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		converter = new ConversionImpl();
+		converter = new MyConversionImpl();
 	}
 
 	//1 a)

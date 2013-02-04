@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Collection;
 import java.util.Arrays;
-import main.java.conversions.ConversionImpl;
+import main.java.conversions.MyConversionImpl;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -29,7 +30,7 @@ public class ConversionParameterizedTest {
 				{700, 1292},
 				{0, 32},
 				//bug
-				{-19, -2}
+				{-19, -2}//1000
 		};
 		return Arrays.asList(data);
 	}
@@ -39,7 +40,7 @@ public class ConversionParameterizedTest {
 	//BUG im code für -19°C -> 1000°F -> wird gefixt
 	@Test
 	public void convertCelsiusToFahrenheit() throws InterruptedException{
-		ConversionImpl converter = new ConversionImpl();
+		MyConversionImpl converter = new MyConversionImpl();
 		assertEquals("Result", this.temperaturInK, 
 				converter.celsiusToFahrenheit(this.temperaturInC), 0.55);
 	}
