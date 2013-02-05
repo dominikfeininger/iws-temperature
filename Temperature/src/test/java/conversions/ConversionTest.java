@@ -24,69 +24,26 @@ public class ConversionTest {
     
 	@Test
 	public void testCelsiusToFahrenheit() throws InterruptedException{
-		
-		//1 a)
-		//20°C -> 68°F
-		//gruen
-		
-		double celsius = 20;
-		double expectedFahrenheit = 68;
-		
-		double fahrenheit = converter.celsiusToFahrenheit(celsius);
-		assertEquals(expectedFahrenheit, fahrenheit, 0.0);
+		//TODO: Impl
 	}
 	
 	@Test
 	public void testFahrenheitToCelsius() {
-		
-		//1 b)
-		//rot -> wird gefixt
-		//68°C -> 20°F
-		
-		double expectedCelsius = 20;
-		double fahrenheit = 68;
-		
-		double celsius = converter.fahrenheitToCelsius(fahrenheit);		
-		assertEquals(expectedCelsius, celsius, 0.0);
+		//TODO: Impl
 	}
 	
-	@Test (timeout = 10)
+	@Test
 	public void testCelsiusToFahrenheitPerformance() throws InterruptedException {
-		
-		//2
-		//Performance Test
-		//(timeout = 10)
-		//rot
-		//Celsius zu Fahrenheit -> wird gefixt
-		
-		double celsius = 20;
-		double expectedFahrenheit = 68;
-		
-		double fahrenheit = converter.celsiusToFahrenheit(celsius);
-		assertEquals(expectedFahrenheit, fahrenheit, 0.0);
+		//TODO: Impl
 	}
 	
-	@Test (expected = IllegalArgumentException.class) 
+	@Test
 	public void testKelvinToCelsius() throws IllegalArgumentException {
-		converter.kelvinToCelsius(-1);
-		
-		//3
-		//rot
-		//expected = IllegalArgumentException.class
+		//TODO: Impl
 	}
 	
 	@Test
 	public void testCelsiusToKelvin(){
-		
-		//5
-		//Test fue Jenkins
-		//gruen
-		//Celsius zu Kelvin
-		
-		double celsius = 128;
-		double expectedKelvin = 401;
-		
-		double kelvin = converter.celsiusToKelvin(celsius);
-		assertEquals(expectedKelvin, kelvin, 0.55);
+		//TODO: Impl
 	}
 }

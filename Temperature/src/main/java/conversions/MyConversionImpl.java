@@ -9,7 +9,6 @@ package main.java.conversions;
  * K=C+273.15
  * F=Cx1.8+32
  * C=(F-32)÷ 1.8
- *
  */
 
 public class MyConversionImpl implements Conversion {
