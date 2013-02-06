@@ -9,8 +9,7 @@ import org.junit.Test;
 
 /**
  * 
- * @author Lautenschlaeger & Feininger
- *
+ * @author D.Feininger
  */
 
 public class ConversionTest {
@@ -22,28 +21,25 @@ public class ConversionTest {
 		converter = new MyConversionImpl();
 	}
     
-	@Test
+	//@Test
 	public void testCelsiusToFahrenheit() throws InterruptedException{
 		//TODO: Impl
 	}
 	
-	@Test
+	//@Test
 	public void testFahrenheitToCelsius() {
-		//TODO: Impl
+		//TODO: check calculation
+		double celsius = converter.fahrenheitToCelsius(68);		
+		assertEquals(20, celsius, 0.0);
 	}
 	
-	@Test
+	//@Test
 	public void testCelsiusToFahrenheitPerformance() throws InterruptedException {
 		//TODO: Impl
 	}
 	
-	@Test
+	//@Test
 	public void testKelvinToCelsius() throws IllegalArgumentException {
-		//TODO: Impl
-	}
-	
-	@Test
-	public void testCelsiusToKelvin(){
 		//TODO: Impl
 	}
 }
