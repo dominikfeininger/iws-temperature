@@ -18,7 +18,7 @@ public class MyConversionImpl implements Conversion {
 		//convertion alg. is too slow
 		//Thread.sleep(20);
 		
-		return (celsius * (9.0/5.0)) + 32.0;
+		return (celsius * (9.0/5.0)) + 31.0;
 	}
 	
 	@Override
