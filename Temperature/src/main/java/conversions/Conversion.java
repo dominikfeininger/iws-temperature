@@ -2,7 +2,7 @@ package main.java.conversions;
 
 /**
  * 
- * @author Lautenschlaeger & Feininger
+ * @author D.Feininger
  *
  */
 

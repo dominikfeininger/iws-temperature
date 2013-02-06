@@ -1,5 +1,11 @@
 package test.java.conversions;
 
+/**
+ * 
+ * @author D.Feininger
+ *
+ */
+
 import static org.junit.Assert.assertEquals;
 
 import java.util.Collection;
@@ -24,16 +30,20 @@ public class ConversionParameterizedTest {
 	
 	@Parameters
 	public static Collection<Object[]> data(){
-
-		//TODO: Impl
-		return null;
+		Object[][] data = new Object [][]{
+				{20, 68},
+				{-100, -148},
+				{700, 1292},
+				{0, 32},
+				{-19, -2}
+		};
+		return Arrays.asList(data);
 	}
 
 	@Test
-	public void convertCelsiusToFahrenheit() throws InterruptedException{
-			
+	public void convertCelsiusToKelvin() throws InterruptedException{		
 		MyConversionImpl converter = new MyConversionImpl();
-		//TODO: Impl
-
+		assertEquals("Result: ", this.temperaturInK, 
+				converter.celsiusToKelvin(this.temperaturInC), 0.55);
 	}
 }
