@@ -2,27 +2,28 @@ package main.java.conversions;
 
 /**
  * 
- * @author D.Feininger
  *
  * Formeln:	 
  * C=K-273.15
  * K=C+273.15
  * F=Cx1.8+32
- * C=(F-32)÷ 1.8
+ * C=(F-32)* 1.8
  */
 
 public class MyConversionImpl implements Conversion {
 
 	@Override
 	public double celsiusToFahrenheit(double celsius) throws InterruptedException{
+		
 		//convertion alg. is too slow
-		Thread.sleep(20);
+		//Thread.sleep(20);
+		
 		return (celsius * (9.0/5.0)) + 32.0;
 	}
 	
 	@Override
 	public double fahrenheitToCelsius(double fahrenheit){
-		return (fahrenheit - 31.0) * (5.0/9.0);
+		return (fahrenheit - 32.0) * (5.0/9.0);
 	}	
 	
 	@Override
@@ -35,9 +36,7 @@ public class MyConversionImpl implements Conversion {
 	
 	@Override
 	public double celsiusToKelvin(double celsius){
-		if(celsius == -19){
-			return 1000;
-		}
+
 		return 	(celsius + 273.15);
 	}
 }
